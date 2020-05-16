@@ -23,5 +23,5 @@ func _on_OnScreenKeyboard_ok_pressed():
 	$OnScreenKeyboard.disabled = true
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	$OnScreenKeyboard.disabled = false
