@@ -10,17 +10,21 @@ onready var _feedback_animatior : AnimationPlayer = $AnimationPlayer
 onready var _trap = $art
 onready var _room_tracker := $RoomTracker
 onready var _sfx := $AudioStreamPlayer
+onready var _osk := $OnScreenKeyboard
 
 func _ready():
 	_trap.animation = str(_problem.type)
+	_osk.set_allow_confirmation(false)
 
 
 func _on_OnScreenKeyboard_number_pressed(number):
 	_answer.add_character(number)
+	_osk.set_allow_confirmation(true)
 
 
 func _on_OnScreenKeyboard_backspace_pressed():
 	_answer.backspace()
+	_osk.set_allow_confirmation(not _answer.text == "")
 
 
 func _on_OnScreenKeyboard_ok_pressed():
@@ -43,6 +47,7 @@ func _on_AnimationPlayer_animation_finished(_anim_name):
 	_answer.text = ""
 	if $HealthTracker.health > 0:
 		_problem.generate()
+		_osk.set_allow_confirmation(false)
 		print(str(_problem.type))
 		_trap.animation = str(_problem.type)
 	else:

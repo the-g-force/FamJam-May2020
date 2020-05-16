@@ -36,11 +36,14 @@ func _on_CommitButton_pressed():
 func _set_disabled(value):
 	disabled = value
 	_set_disabled_recursive(self, value)
-	
-	
+
+
 func _set_disabled_recursive(node:Node, value):
 	for child in node.get_children():
 		if "disabled" in child:
 			child.disabled = value
 		_set_disabled_recursive(child, value)
-		
+
+
+func set_allow_confirmation(allowed : bool):
+	$VBoxContainer/ControlRow/CommitButton.disabled = !allowed
