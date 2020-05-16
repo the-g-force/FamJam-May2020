@@ -1,6 +1,5 @@
 extends Control
 
-onready var MainMenu = preload("TitleScene.tscn");
-
 func _on_MainMenuButton_pressed():
-	get_tree().change_scene_to(MainMenu)
+	var mainmenu = load("res://src/TitleScene.tscn")
+	var _ignored = get_tree().change_scene_to(mainmenu)
