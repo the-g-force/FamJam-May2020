@@ -14,7 +14,7 @@ __meta__ = {
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -193.0
+margin_top = -253.0
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -22,12 +22,12 @@ __meta__ = {
 
 [node name="Row1" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 480.0
-margin_bottom = 94.0
+margin_bottom = 81.0
 size_flags_vertical = 3
 
 [node name="Button1" type="Button" parent="VBoxContainer/Row1"]
 margin_right = 92.0
-margin_bottom = 94.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1"
@@ -35,7 +35,7 @@ text = "1"
 [node name="Button2" type="Button" parent="VBoxContainer/Row1"]
 margin_left = 96.0
 margin_right = 188.0
-margin_bottom = 94.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2"
@@ -43,7 +43,7 @@ text = "2"
 [node name="Button3" type="Button" parent="VBoxContainer/Row1"]
 margin_left = 192.0
 margin_right = 284.0
-margin_bottom = 94.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3"
@@ -51,7 +51,7 @@ text = "3"
 [node name="Button4" type="Button" parent="VBoxContainer/Row1"]
 margin_left = 288.0
 margin_right = 380.0
-margin_bottom = 94.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "4"
@@ -59,20 +59,20 @@ text = "4"
 [node name="Button5" type="Button" parent="VBoxContainer/Row1"]
 margin_left = 384.0
 margin_right = 480.0
-margin_bottom = 94.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "5"
 
 [node name="Row2" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 98.0
+margin_top = 85.0
 margin_right = 480.0
-margin_bottom = 193.0
+margin_bottom = 166.0
 size_flags_vertical = 3
 
 [node name="Button6" type="Button" parent="VBoxContainer/Row2"]
 margin_right = 92.0
-margin_bottom = 95.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "6"
@@ -80,7 +80,7 @@ text = "6"
 [node name="Button7" type="Button" parent="VBoxContainer/Row2"]
 margin_left = 96.0
 margin_right = 188.0
-margin_bottom = 95.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "7"
@@ -88,7 +88,7 @@ text = "7"
 [node name="Button8" type="Button" parent="VBoxContainer/Row2"]
 margin_left = 192.0
 margin_right = 284.0
-margin_bottom = 95.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "8"
@@ -96,7 +96,7 @@ text = "8"
 [node name="Button9" type="Button" parent="VBoxContainer/Row2"]
 margin_left = 288.0
 margin_right = 380.0
-margin_bottom = 95.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "9"
@@ -104,7 +104,33 @@ text = "9"
 [node name="Button0" type="Button" parent="VBoxContainer/Row2"]
 margin_left = 384.0
 margin_right = 480.0
-margin_bottom = 95.0
+margin_bottom = 81.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "0"
+
+[node name="ControlRow" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 170.0
+margin_right = 480.0
+margin_bottom = 253.0
+size_flags_vertical = 3
+
+[node name="BackspaceButton" type="Button" parent="VBoxContainer/ControlRow"]
+margin_right = 238.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Undo"
+
+[node name="CommitButton" type="Button" parent="VBoxContainer/ControlRow"]
+margin_left = 242.0
+margin_right = 480.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBoxContainer/ControlRow/BackspaceButton" to="." method="_on_BackspaceButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ControlRow/CommitButton" to="." method="_on_CommitButton_pressed"]
