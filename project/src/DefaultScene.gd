@@ -1,23 +1,23 @@
 extends Control
 
-var _problem
 var _death_scene := preload("res://src/DeathScene.tscn")
 
-onready var answer_label : Answer = $Answer
+onready var _answer : Answer = $HBoxContainer/Answer
+onready var _problem = $HBoxContainer/ProblemGenerator
 onready var _feedback : Label = $Label
 onready var _feedback_animatior : AnimationPlayer = $AnimationPlayer
 
 
 func _on_OnScreenKeyboard_number_pressed(number):
-	answer_label.add_character(number)
+	_answer.add_character(number)
 
 
 func _on_OnScreenKeyboard_backspace_pressed():
-	answer_label.backspace()
+	_answer.backspace()
 
 
 func _on_OnScreenKeyboard_ok_pressed():
-	if $Answer/Label.text == str($ProblemGenerator.problem):
+	if _answer.text == str(_problem.problem):
 		_feedback.text = "SUCCESS \n You disable the trap and pass through safely."
 	else:
 		_feedback.text = "FAIL \n You fail to disable the trap. As you pass, it triggers."
@@ -28,8 +28,8 @@ func _on_OnScreenKeyboard_ok_pressed():
 
 func _on_AnimationPlayer_animation_finished(_anim_name):
 	$OnScreenKeyboard.disabled = false
-	$Answer/Label.text = ""
+	_answer.text = ""
 	if $HealthTracker.health > 0:
-		$ProblemGenerator.generate()
+		_problem.generate()
 	else:
 		var _ignored = get_tree().change_scene_to(_death_scene)
