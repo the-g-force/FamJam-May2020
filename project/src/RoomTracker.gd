@@ -9,7 +9,7 @@ func _ready():
 
 
 func _update_text():
-	text = "Room %d of %d" % [current_room, LAST_ROOM]
+	text = "Room\n%d of %d" % [current_room, LAST_ROOM]
 	
 
 func advance():
