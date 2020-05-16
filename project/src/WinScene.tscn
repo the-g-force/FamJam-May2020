@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/DeathScene.gd" type="Script" id=1]
+
+[node name="DeathScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -19.1855
+margin_top = -6.18549
+margin_right = 38.8145
+margin_bottom = 7.81451
+text = "You live"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenuButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -39.1673
+margin_top = -130.803
+margin_right = 43.8327
+margin_bottom = -110.803
+text = "Main Menu"
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
