@@ -2,12 +2,14 @@ extends Node
 
 enum Song {
 	NONE,
+	CREDITS,
 	GAME,
 	LOSS,
 	WIN
 }
 
 const _SONG_MAP = {
+	Song.CREDITS: preload("res://assets/flipout.ogg"),
 	Song.GAME: preload("res://assets/dungeon_1.ogg"),
 	Song.LOSS: preload("res://assets/untitled.ogg"),
 	Song.WIN: preload("res://assets/victory.ogg"),
@@ -17,6 +19,9 @@ onready var _music = $Music
 
 var _song = Song.NONE
 
+func play_credits_music() -> void:
+	_play(Song.CREDITS)
+	
 
 func play_game_music() -> void:
 	_play(Song.GAME)
