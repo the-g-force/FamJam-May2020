@@ -43,7 +43,6 @@ margin_top = 55.0
 margin_right = 205.0
 margin_bottom = 106.0
 size_flags_vertical = 3
-disabled = true
 text = "Credits"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -84,4 +83,5 @@ __meta__ = {
 "_edit_lock_": true
 }
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/FullscreenButton" to="." method="_on_FullscreenButton_pressed"]
