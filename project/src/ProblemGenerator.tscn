@@ -2,8 +2,11 @@
 
 [ext_resource path="res://src/ProblemGenerator.gd" type="Script" id=1]
 
-[node name="ProblemGenerator" type="Node"]
+[node name="ProblemGenerator" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 492.0
@@ -11,16 +14,6 @@ margin_top = 293.0
 margin_right = 546.0
 margin_bottom = 307.0
 text = "Problem"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 559.778
-margin_top = 290.0
-margin_right = 609.778
-margin_bottom = 317.313
-selecting_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
