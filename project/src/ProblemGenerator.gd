@@ -23,7 +23,7 @@ func generate():
 	elif type == 3:
 		problem = _first_digit
 		_first_digit *= _second_digit
-		_operator = "/"
+		_operator = " ÷ "
 	elif type == 4:
 		problem = _first_digit
 		_first_digit += _second_digit
