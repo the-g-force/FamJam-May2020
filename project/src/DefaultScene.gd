@@ -16,3 +16,8 @@ func _on_Control_answer_changed(answer):
 
 func _on_OnScreenKeyboard_backspace_pressed():
 	answer_label.backspace()
+
+
+func _on_OnScreenKeyboard_ok_pressed():
+	if $Answer/Label.text == str($ProblemGenerator.problem):
+		print("Yay")
