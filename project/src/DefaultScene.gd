@@ -48,7 +48,6 @@ func _on_AnimationPlayer_animation_finished(_anim_name):
 	if $HealthTracker.health > 0:
 		_problem.generate()
 		_osk.set_allow_confirmation(false)
-		print(str(_problem.type))
 		_trap.animation = str(_problem.type)
 	else:
 		var _ignored = get_tree().change_scene_to(_death_scene)
