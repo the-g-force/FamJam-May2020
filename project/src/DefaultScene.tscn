@@ -107,7 +107,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 0.658824, 0, 1 ) ]
+"values": [ Color( 0.054902, 0.956863, 0.937255, 1 ) ]
 }
 tracks/2/type = "audio"
 tracks/2/path = NodePath("AudioStreamPlayer")
@@ -132,14 +132,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_scale = Vector2( 12, 11.24 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="art" type="AnimatedSprite" parent="."]
 position = Vector2( 238, 223.987 )
 frames = SubResource( 1 )
@@ -154,7 +146,7 @@ margin_top = 84.6395
 margin_right = 472.815
 margin_bottom = 211.639
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0.658824, 0, 1 )
+custom_colors/font_color = Color( 0.054902, 0.956863, 0.937255, 1 )
 text = "You Fail to disable the trap. As you pass, it triggers."
 autowrap = true
 __meta__ = {
