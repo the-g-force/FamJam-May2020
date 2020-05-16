@@ -14,4 +14,8 @@ func _on_OnScreenKeyboard_backspace_pressed():
 
 func _on_OnScreenKeyboard_ok_pressed():
 	if $Answer/Label.text == str($ProblemGenerator.problem):
-		print("Yay")
+		$Label.text = "Yay"
+		$AnimationPlayer.play("WIN")
+	else:
+		$Label.text = "Boo"
+		$AnimationPlayer.play("WIN")
