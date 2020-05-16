@@ -43,4 +43,3 @@ margin_bottom = 238.261
 [connection signal="backspace_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_backspace_pressed"]
 [connection signal="number_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_number_pressed"]
 [connection signal="ok_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_ok_pressed"]
-[connection signal="answer_changed" from="Answer" to="." method="_on_Control_answer_changed"]
