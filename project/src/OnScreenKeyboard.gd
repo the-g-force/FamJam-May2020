@@ -4,14 +4,15 @@ signal number_pressed(number)
 signal backspace_pressed
 signal ok_pressed
 
+export var disabled := false setget _set_disabled
 
 func _ready():
-	var buttons = _get_all_buttons()
+	var buttons = _get_all_number_buttons()
 	for button in buttons:
 		button.connect('pressed', self, '_on_number_button_clicked', [button])
 
 	
-func _get_all_buttons():
+func _get_all_number_buttons():
 	var rows = [$VBoxContainer/Row1, $VBoxContainer/Row2]
 	var buttons = []
 	for row in rows:
@@ -30,3 +31,16 @@ func _on_BackspaceButton_pressed():
 
 func _on_CommitButton_pressed():
 	emit_signal("ok_pressed")
+
+
+func _set_disabled(value):
+	disabled = value
+	_set_disabled_recursive(self, value)
+	
+	
+func _set_disabled_recursive(node:Node, value):
+	for child in node.get_children():
+		if "disabled" in child:
+			child.disabled = value
+		_set_disabled_recursive(child, value)
+		
