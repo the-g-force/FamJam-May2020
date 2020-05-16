@@ -58,10 +58,10 @@ margin_right = 174.435
 margin_bottom = 238.261
 
 [node name="Label" type="Label" parent="."]
-margin_left = 496.342
-margin_top = 273.595
-margin_right = 536.342
-margin_bottom = 287.595
+margin_left = 522.87
+margin_top = 272.878
+margin_right = 562.87
+margin_bottom = 286.878
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Yay"
 __meta__ = {
@@ -73,3 +73,4 @@ anims/WIN = SubResource( 1 )
 [connection signal="backspace_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_backspace_pressed"]
 [connection signal="number_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_number_pressed"]
 [connection signal="ok_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_ok_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -20,3 +20,8 @@ func _on_OnScreenKeyboard_ok_pressed():
 	else:
 		_feedback.text = "Boo"
 	_feedback_animatior.play("WIN")
+	$OnScreenKeyboard.disabled = true
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	$OnScreenKeyboard.disabled = false
