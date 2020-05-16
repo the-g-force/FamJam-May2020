@@ -11,6 +11,7 @@ onready var _trap = $art
 onready var _room_tracker := $RoomTracker
 onready var _sfx := $AudioStreamPlayer
 onready var _osk := $OnScreenKeyboard
+onready var _health_tracker := $HealthTracker
 
 func _ready():
 	_trap.animation = str(_problem.type)
@@ -34,8 +35,8 @@ func _on_OnScreenKeyboard_ok_pressed():
 	else:
 		_feedback.text = "FAIL \n You fail to disable the trap. As you pass, it triggers."
 		_feedback_animatior.play("LOSE")
-		$HealthTracker.health -= 1
-	$OnScreenKeyboard.disabled = true
+		_health_tracker.health -= 1
+	_osk.disabled = true
 
 
 func _on_AnimationPlayer_animation_finished(_anim_name):
@@ -43,9 +44,9 @@ func _on_AnimationPlayer_animation_finished(_anim_name):
 		var _ignored = get_tree().change_scene_to(WinScene)
 	else:
 		_room_tracker.advance()
-	$OnScreenKeyboard.disabled = false
+	_osk.disabled = false
 	_answer.text = ""
-	if $HealthTracker.health > 0:
+	if _health_tracker.health > 0:
 		_problem.generate()
 		_osk.set_allow_confirmation(false)
 		_trap.animation = str(_problem.type)
