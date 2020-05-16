@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/OnScreenKeyboard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/DefaultScene.gd" type="Script" id=2]
@@ -19,11 +19,6 @@ animations = [ {
 "name": "3",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "4",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "1",
@@ -33,6 +28,11 @@ animations = [ {
 "loop": true,
 "name": "2",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
 } ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -40,6 +40,7 @@ size = 20
 font_data = ExtResource( 7 )
 
 [sub_resource type="Animation" id=3]
+resource_name = "LOSE"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:modulate")
@@ -52,6 +53,45 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0.658824, 0, 1 ) ]
 }
 
 [node name="DefaultScene" type="Control"]
@@ -84,7 +124,7 @@ margin_top = 84.6395
 margin_right = 472.815
 margin_bottom = 211.639
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "You Fail to disable the trap. As you pass, it triggers."
 autowrap = true
 __meta__ = {
@@ -92,7 +132,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/WIN = SubResource( 3 )
+anims/LOSE = SubResource( 3 )
+anims/WIN = SubResource( 4 )
 
 [node name="HealthTracker" parent="." instance=ExtResource( 6 )]
 
