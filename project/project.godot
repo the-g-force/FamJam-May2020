@@ -30,6 +30,10 @@ config/name="FamJam-May2020"
 run/main_scene="res://src/TitleScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Jukebox="*res://src/Jukebox.tscn"
+
 [display]
 
 window/size/width=480
