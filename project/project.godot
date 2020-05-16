@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Answer",
 "language": "GDScript",
 "path": "res://src/DynamicNumberLabel.gd"
+}, {
+"base": "HBoxContainer",
+"class": "HealthTracker",
+"language": "GDScript",
+"path": "res://src/HealthTracker.gd"
 } ]
 _global_script_class_icons={
-"Answer": ""
+"Answer": "",
+"HealthTracker": ""
 }
 
 [application]

@@ -19,6 +19,7 @@ func _on_OnScreenKeyboard_ok_pressed():
 		_feedback.text = "Yay"
 	else:
 		_feedback.text = "Boo"
+		$HealthTracker.health -= 1
 	_feedback_animatior.play("WIN")
 	$OnScreenKeyboard.disabled = true
 
