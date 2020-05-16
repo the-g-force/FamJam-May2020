@@ -1,6 +1,8 @@
 extends Node
 
 onready var _text : Label = $Label
+onready var _answer_box : TextEdit = $TextEdit
+var _answer : String = ""
 var _problem_text : String = ""
 var _operator : String = ""
 var _problem
