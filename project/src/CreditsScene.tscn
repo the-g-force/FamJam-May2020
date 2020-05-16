@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/CreditsScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/BlarneyCastle5-adjusted.png" type="Texture" id=2]
 
 [node name="CreditsScene" type="Control"]
 anchor_right = 1.0
@@ -16,11 +17,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -152.0
-margin_top = -75.0
+margin_top = -9.5
 margin_right = 152.0
-margin_bottom = 75.0
+margin_bottom = 293.5
 text = "The G-Force
 May 2020 Fam Jam
+
+Creative Director
+Leo Gestwicki
+
+Paul Gestwicki
+Jessica Gestwicki
+Alex Gestwicki
+Peter Gestwicki
+Daniel Gestwicki
 
 
  Blarney Castle image
@@ -36,9 +46,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -39.1673
-margin_top = -130.803
-margin_right = 43.8327
-margin_bottom = -110.803
+margin_left = -41.5
+margin_top = -42.0
+margin_right = 41.5
+margin_bottom = -22.0
 text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlarneyCastle5-adjusted" type="Sprite" parent="."]
+position = Vector2( 240, 361 )
+z_index = -2
+texture = ExtResource( 2 )
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
