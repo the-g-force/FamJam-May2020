@@ -1,25 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/DeathScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/traps/dead.png" type="Texture" id=2]
 
 [node name="DeathScene" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -7.0
-margin_right = 20.0
-margin_bottom = 7.0
-text = "You dead"
+margin_left = -240.0
+margin_right = 240.0
+margin_bottom = 720.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -34,4 +24,8 @@ margin_top = -130.803
 margin_right = 43.8327
 margin_bottom = -110.803
 text = "Main Menu"
+
+[node name="dead" type="Sprite" parent="."]
+position = Vector2( 240, 240 )
+texture = ExtResource( 2 )
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/WinScene.gd" type="Script" id=1]
+[ext_resource path="res://assets/win.png" type="Texture" id=2]
 
 [node name="WinScene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = -8.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -15,11 +20,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -19.1855
-margin_top = -6.18549
-margin_right = 38.8145
-margin_bottom = 7.81451
-text = "You live"
+margin_left = -40.0
+margin_top = 98.0
+margin_right = 40.0
+margin_bottom = 112.0
+text = "You made it!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -34,4 +39,9 @@ margin_top = -130.803
 margin_right = 43.8327
 margin_bottom = -110.803
 text = "Main Menu"
+
+[node name="win" type="Sprite" parent="."]
+position = Vector2( 223.255, 343.125 )
+scale = Vector2( 0.46458, 0.46458 )
+texture = ExtResource( 2 )
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
