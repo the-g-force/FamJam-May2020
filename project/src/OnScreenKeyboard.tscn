@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/OnScreenKeyboard.gd" type="Script" id=1]
+
+[node name="OnScreenKeyboard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -193.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Row1" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 480.0
+margin_bottom = 94.0
+size_flags_vertical = 3
+
+[node name="Button1" type="Button" parent="VBoxContainer/Row1"]
+margin_right = 92.0
+margin_bottom = 94.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1"
+
+[node name="Button2" type="Button" parent="VBoxContainer/Row1"]
+margin_left = 96.0
+margin_right = 188.0
+margin_bottom = 94.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "2"
+
+[node name="Button3" type="Button" parent="VBoxContainer/Row1"]
+margin_left = 192.0
+margin_right = 284.0
+margin_bottom = 94.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "3"
+
+[node name="Button4" type="Button" parent="VBoxContainer/Row1"]
+margin_left = 288.0
+margin_right = 380.0
+margin_bottom = 94.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "4"
+
+[node name="Button5" type="Button" parent="VBoxContainer/Row1"]
+margin_left = 384.0
+margin_right = 480.0
+margin_bottom = 94.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "5"
+
+[node name="Row2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 98.0
+margin_right = 480.0
+margin_bottom = 193.0
+size_flags_vertical = 3
+
+[node name="Button6" type="Button" parent="VBoxContainer/Row2"]
+margin_right = 92.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "6"
+
+[node name="Button7" type="Button" parent="VBoxContainer/Row2"]
+margin_left = 96.0
+margin_right = 188.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "7"
+
+[node name="Button8" type="Button" parent="VBoxContainer/Row2"]
+margin_left = 192.0
+margin_right = 284.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "8"
+
+[node name="Button9" type="Button" parent="VBoxContainer/Row2"]
+margin_left = 288.0
+margin_right = 380.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "9"
+
+[node name="Button0" type="Button" parent="VBoxContainer/Row2"]
+margin_left = 384.0
+margin_right = 480.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
