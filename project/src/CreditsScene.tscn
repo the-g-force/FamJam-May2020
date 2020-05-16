@@ -16,9 +16,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -152.0
-margin_top = -9.5
-margin_right = 152.0
+margin_left = -200.0
+margin_top = -9.49997
+margin_right = 200.0
 margin_bottom = 293.5
 text = "The G-Force
 May 2020 Fam Jam
@@ -34,7 +34,9 @@ Daniel Gestwicki
 
 
  Blarney Castle image
-  By User Thesteve on en.wikipedia - en:User:Thesteve, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=1148293"
+  By User Thesteve on en.wikipedia - en:User:Thesteve
+CC BY-SA 4.0
+https://commons.wikimedia.org/w/index.php?curid=1148293"
 align = 1
 autowrap = true
 __meta__ = {
