@@ -1,7 +1,8 @@
 extends Control
 
 func _ready():
-	Jukebox.play_loss_music()
+	Jukebox.play_victory_music()
+	
 
 func _on_MainMenuButton_pressed():
 	var mainmenu = load("res://src/TitleScene.tscn")
