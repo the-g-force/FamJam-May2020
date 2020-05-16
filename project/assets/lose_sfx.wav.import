@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lose_sfx.wav-c5b6ef694b784b811684f52ebdd1cece.sample"
+
+[deps]
+
+source_file="res://assets/lose_sfx.wav"
+dest_files=[ "res://.import/lose_sfx.wav-c5b6ef694b784b811684f52ebdd1cece.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

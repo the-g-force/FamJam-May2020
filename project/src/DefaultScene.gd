@@ -9,6 +9,7 @@ onready var _feedback : Label = $Label
 onready var _feedback_animatior : AnimationPlayer = $AnimationPlayer
 onready var _trap = $art
 onready var _room_tracker := $RoomTracker
+onready var _sfx := $AudioStreamPlayer
 
 func _ready():
 	_trap.animation = str(_problem.type)
