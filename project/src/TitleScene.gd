@@ -4,3 +4,7 @@ onready var GameScene = preload("res://src/DefaultScene.tscn")
 
 func _on_StartButton_pressed():
 	get_tree().change_scene_to(GameScene)
+
+
+func _on_FullscreenButton_pressed():
+	OS.window_fullscreen = not OS.window_fullscreen
