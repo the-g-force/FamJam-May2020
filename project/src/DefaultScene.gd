@@ -26,5 +26,4 @@ func _on_OnScreenKeyboard_ok_pressed():
 func _on_AnimationPlayer_animation_finished(_anim_name):
 	$OnScreenKeyboard.disabled = false
 	$Answer/Label.text = ""
-	if _feedback.text == "Yay":
-		$ProblemGenerator.generate()
+	$ProblemGenerator.generate()
