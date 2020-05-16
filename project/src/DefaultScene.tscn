@@ -98,9 +98,9 @@ anims/WIN = SubResource( 3 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 254.835
-margin_top = 158.829
+margin_top = 136.829
 margin_right = 294.835
-margin_bottom = 198.829
+margin_bottom = 176.829
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
