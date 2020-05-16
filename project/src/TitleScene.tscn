@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/TitleScene.gd" type="Script" id=1]
-[ext_resource path="res://assets/Berkahi Blackletter.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/LinLibertine_DR.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/BlarneyCastle5-adjusted.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 64
-font_data = ExtResource( 2 )
+size = 24
+font_data = ExtResource( 3 )
 
 [node name="TitleScene" type="Control"]
 anchor_right = 1.0
@@ -17,13 +18,13 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = -102.5
-margin_top = 64.1275
+margin_top = -245.0
 margin_right = 102.5
-margin_bottom = 225.128
+margin_bottom = -84.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -58,15 +59,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="flavor text" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -80.9359
-margin_top = -58.6544
-margin_right = 81.0641
-margin_bottom = -27.6544
+margin_left = -151.5
+margin_top = 1.5
+margin_right = 151.5
+margin_bottom = 74.5
+custom_fonts/font = SubResource( 1 )
 text = "Go through the dungeons
 and disable traps!"
 align = 1
@@ -74,20 +76,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" type="Label" parent="."]
-anchor_left = 0.483
-anchor_right = 0.483
-margin_left = -102.291
-margin_top = 72.0309
-margin_right = 102.709
-margin_bottom = 205.031
-custom_fonts/font = SubResource( 1 )
-text = "Math
-Traps"
-align = 1
-valign = 1
+[node name="BlarneyCastle5-adjusted" type="Sprite" parent="."]
+position = Vector2( 240, 360 )
+z_index = -1
+texture = ExtResource( 4 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/FullscreenButton" to="." method="_on_FullscreenButton_pressed"]
