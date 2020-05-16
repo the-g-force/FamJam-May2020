@@ -18,9 +18,9 @@ func _on_OnScreenKeyboard_backspace_pressed():
 
 func _on_OnScreenKeyboard_ok_pressed():
 	if $Answer/Label.text == str($ProblemGenerator.problem):
-		_feedback.text = "You disable the trap and pass through safely."
+		_feedback.text = "SUCCESS \n You disable the trap and pass through safely."
 	else:
-		_feedback.text = "You Fail to disable the trap. As you pass, it triggers."
+		_feedback.text = "FAIL \n You fail to disable the trap. As you pass, it triggers."
 		$HealthTracker.health -= 1
 	_feedback_animatior.play("WIN")
 	$OnScreenKeyboard.disabled = true
