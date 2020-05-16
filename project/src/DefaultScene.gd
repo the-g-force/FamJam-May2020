@@ -7,6 +7,7 @@ onready var _answer : Answer = $HBoxContainer/Answer
 onready var _problem = $HBoxContainer/ProblemGenerator
 onready var _feedback : Label = $Label
 onready var _feedback_animatior : AnimationPlayer = $AnimationPlayer
+onready var _trap = $art
 onready var _room_tracker := $RoomTracker
 
 
@@ -37,5 +38,6 @@ func _on_AnimationPlayer_animation_finished(_anim_name):
 	_answer.text = ""
 	if $HealthTracker.health > 0:
 		_problem.generate()
+		_trap.animation = str(_problem.type)
 	else:
 		var _ignored = get_tree().change_scene_to(_death_scene)
