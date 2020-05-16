@@ -9,7 +9,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "WIN"
-length = 3.0
+length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:rect_position")
 tracks/0/interp = 1
@@ -17,7 +17,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2, 3 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 522.87, 272.878 ), Vector2( 211.705, 267.86 ), Vector2( 211.705, 267.86 ), Vector2( 496.342, 273.595 ) ]
@@ -59,10 +59,10 @@ margin_right = 174.435
 margin_bottom = 238.261
 
 [node name="Label" type="Label" parent="."]
-margin_left = 522.87
-margin_top = 272.878
-margin_right = 562.87
-margin_bottom = 286.878
+margin_left = 496.342
+margin_top = 273.595
+margin_right = 536.342
+margin_bottom = 287.595
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Yay"
 __meta__ = {
