@@ -22,6 +22,6 @@ margin_left = -300.727
 margin_top = -64.3739
 margin_right = -300.727
 margin_bottom = -64.3739
-[connection signal="number_pressed" from="OnScreenKeyboard" to="Answer" method="_on_OnScreenKeyboard_number_pressed"]
+[connection signal="backspace_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_backspace_pressed"]
 [connection signal="number_pressed" from="OnScreenKeyboard" to="." method="_on_OnScreenKeyboard_number_pressed"]
 [connection signal="answer_changed" from="Answer" to="." method="_on_Control_answer_changed"]
